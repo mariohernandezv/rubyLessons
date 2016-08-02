@@ -44,27 +44,27 @@ class AboutSymbols < Neo::Koan
 
   def test_symbols_can_be_made_from_strings
     string = "catsAndDogs"
-    assert_equal __, string.to_sym
+    assert_equal :"catsAndDogs", string.to_sym
   end
 
   def test_symbols_with_spaces_can_be_built
     symbol = :"cats and dogs"
 
-    assert_equal __.to_sym, symbol
+    assert_equal "cats and dogs".to_sym, symbol
   end
 
   def test_symbols_with_interpolation_can_be_built
     value = "and"
     symbol = :"cats #{value} dogs"
 
-    assert_equal __.to_sym, symbol
+    assert_equal :"cats and dogs".to_sym, symbol
   end
 
   def test_to_s_is_called_on_interpolated_symbols
     symbol = :cats
     string = "It is raining #{symbol} and dogs."
 
-    assert_equal __, string
+    assert_equal "It is raining cats and dogs.", string
   end
 
   def test_symbols_are_not_strings
