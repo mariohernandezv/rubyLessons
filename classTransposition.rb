@@ -1,3 +1,4 @@
+require 'pry'
 class Transposition 
 
 	def initialize(code)
@@ -8,6 +9,7 @@ class Transposition
 		arr1=[]
 		arr2=[]
 		[*0...original.length].each { |indice| (indice%2) == 0 ? arr1 << original[indice] : arr2 << original[indice] }
+		binding.pry
 		@code = arr1.join << arr2.join
 	end
 
@@ -25,6 +27,7 @@ class Transposition
 		[*0...original.length].each do |indice|  
 			salida << arr1[indice]
 			salida << arr2[indice]
+			binding.pry
 		end
 		@code = salida.join
 	end
