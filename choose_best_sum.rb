@@ -1,3 +1,4 @@
+#por terminar
 def choose_best_sum(t = 20, k = 3, ls = [1,2,3,4,5,6,7,8,9])
 	menor = 0
     if ls.empty?
