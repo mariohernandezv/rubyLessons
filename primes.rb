@@ -1,11 +1,12 @@
 class Primes
 	attr_accessor :primos
+	@primos = [2]
 
 	def initialize
-		@primos = [2]
+		
 	end
 
-	def first(n=3)
+	def self.first(n=3)
 		if @primos.length.to_i > n 
 			return @primos[0..n-1]
 		else
@@ -19,7 +20,7 @@ class Primes
 	end
 
 
-	def primo(num)
+	def self.primo(num)
 		[*2...num].each { |i| return false if (num % i) == 0 }
 		true
 	end
