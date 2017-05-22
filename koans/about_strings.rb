@@ -22,7 +22,7 @@ class AboutStrings < Neo::Koan
   end
 
   def test_use_backslash_for_those_hard_cases
-    a = "He said, \"Don't\""
+    a = "He said, \"Don\'t\""
     b = 'He said, "Don\'t"'
     assert_equal true, a == b
   end
@@ -155,7 +155,7 @@ EOS
       assert_equal "a", ?a
       assert_equal false, ?a == 97
 
-      assert_equal __, ?b == (?a + 1)
+      assert_equal false, ?b == (?a + 1)
     end
   end
 

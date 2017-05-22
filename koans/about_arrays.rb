@@ -74,7 +74,7 @@ class AboutArrays < Neo::Koan
     array = [1,2]
     array.unshift(:first)
 
-    assert_equal [:first, 1,2], array
+    assert_equal [:first,1,2], array
 
     shifted_value = array.shift
     assert_equal :first, shifted_value

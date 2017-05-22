@@ -96,7 +96,7 @@ class AboutHashes < Neo::Koan
     hash[:one] << "uno"
     hash[:two] << "dos"
 
-    assert_equal ["uno","dos"] , hash[:one]
+    assert_equal ["uno","dos"], hash[:one]
     assert_equal ["uno","dos"], hash[:two]
     assert_equal ["uno","dos"], hash[:three]
 
@@ -111,6 +111,6 @@ class AboutHashes < Neo::Koan
 
     assert_equal ["uno"], hash[:one]
     assert_equal ["dos"], hash[:two]
-    assert_equal [], hash[:eight]
+    assert_equal [], hash[:three]
   end
 end
