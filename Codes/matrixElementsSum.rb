@@ -27,7 +27,7 @@
 def matrixElementsSum(matrix)
     matrix.each_with_index do |v, i|
       v.each_with_index { |vv, ii| matrix[i+1][ii] = 0 if vv == 0 && matrix[i+1] }
-    vv.flatten.inject(0, :+)
+    end.flatten.inject(0, :+)
 end
 
 
